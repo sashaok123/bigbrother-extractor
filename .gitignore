@@ -1,0 +1,50 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.venv/
+venv/
+env/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Extractor outputs (these can be many GB; users generate them locally)
+Extracted/
+disc.iso
+*.BIN
+*.bin
+*.CUE
+*.cue
+
+# Don't redistribute copyrighted game assets
+Dll/
+*.dat
+*.act
+*.pix
+*.pal
+*.mat
+*.brm
+*.brg
+*.brs
+*.bld
+*.fog
+*.lit
+*.tab
+*.3da
+*.vta
+*.GEM
+*.sdf
+*.map
+
+# But DO keep these tracked — they're part of the repo
+!requirements.txt
