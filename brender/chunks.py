@@ -173,7 +173,7 @@ def iter_chunks(reader: BEReader):
     """Yield (chunk_id, payload_bytes) until the reader is exhausted or a malformed
     header is encountered. Caller is responsible for interpreting END markers.
 
-    Robust against truncation — if a declared payload length overruns the end of
+    Robust against truncation - if a declared payload length overruns the end of
     the buffer, the iterator stops cleanly.
     """
     while not reader.eof():
@@ -184,7 +184,7 @@ def iter_chunks(reader: BEReader):
         except EOFError:
             return
         if plen > reader.remaining():
-            # Truncated — stop cleanly
+            # Truncated - stop cleanly
             return
         try:
             payload = reader.read(plen)

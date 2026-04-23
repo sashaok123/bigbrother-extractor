@@ -197,7 +197,7 @@ def _parse_model_header(cid: int, payload: bytes) -> str:
                 r.read_f32_be()
             return r.read_asciz()
         else:
-            # OLD_MODEL variants — name appears near the end.
+            # OLD_MODEL variants - name appears near the end.
             # Practical observation: u16 flags (or padding) then asciz.
             # Try reading from the end backwards: find the asciz by scanning
             # for the last ASCII-printable run preceding the terminator.
@@ -315,7 +315,7 @@ def parse_model_file(path: str | Path) -> list[Model]:
 
         try:
             if cid in model_header_ids:
-                # Starting a new model — flush any previous
+                # Starting a new model - flush any previous
                 if vertices is not None:
                     flush()
                 current_name = _parse_model_header(cid, payload)
@@ -351,7 +351,7 @@ def parse_model_file(path: str | Path) -> list[Model]:
             elif cid == FID.FILE_INFO:
                 pass  # ignore stray
             else:
-                # Unknown at model scope — track and skip
+                # Unknown at model scope - track and skip
                 UNKNOWN_CHUNKS.add(cid)
                 log.debug("%s: skipping chunk 0x%02X (plen=%d)", path.name, cid, plen)
         except Exception as exc:  # noqa: BLE001

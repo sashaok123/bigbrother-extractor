@@ -38,7 +38,7 @@ def rip(bin_path: Path, iso_path: Path) -> int:
                 # Form 1: subheader at [16:24], data at [24:24+2048]
                 user = s[24:24 + USER_DATA]
             else:
-                # Unknown/audio — skip
+                # Unknown/audio - skip
                 continue
             fo.write(user)
     return sectors

@@ -105,7 +105,7 @@ def _decode_pixels(payload: bytes) -> tuple[bytes, int]:
     For 16-bit pixel types (elem_size == 2), each pair is stored big-endian
     and must be byte-swapped to native LE. For byte-array types (elem_size
     1, 3, 4 where each byte is an independent R/G/B/A channel) the bytes
-    are already in natural order on disk — no swap is required.
+    are already in natural order on disk - no swap is required.
 
     Returns (pixel_bytes, elem_size) so higher-level decoders know the stride
     used on disk (which may differ from `bytes_per_pixel` for odd cases).

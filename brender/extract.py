@@ -171,7 +171,7 @@ def export_pixmaps(
                 counters["pal_files"] += 1
 
             for idx, pm in enumerate(pixmaps):
-                # Skip pixmaps that are palettes themselves — too thin to be useful
+                # Skip pixmaps that are palettes themselves - too thin to be useful
                 if pm.height == 1 and pm.type in (7, 6):
                     continue
                 if pm.pixels is None:
@@ -307,7 +307,7 @@ def run(iso: Path, out: Path, winstd: Path | None = None, verbose: bool = False)
     iso : Path
         Directory containing the extracted ISO9660 tree.
     out : Path
-        Output root — will contain ``Mesh/``, ``Texture/``,
+        Output root - will contain ``Mesh/``, ``Texture/``,
         ``mesh_texture_map.json`` and ``extraction.log``.
     winstd : Path | None
         Optional fallback palette (defaults to ``<project>/Dll/Winstd.pal``).

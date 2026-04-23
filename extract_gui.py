@@ -89,7 +89,7 @@ HERE = Path(__file__).resolve().parent
 class ExtractApp:
     def __init__(self, root: tk.Tk) -> None:
         self.root = root
-        root.title("Big Brother — Extract Models & Textures")
+        root.title("Big Brother - Extract Models & Textures")
         root.geometry("760x560")
 
         self.bin_var = tk.StringVar(value=self._autodetect_bin())

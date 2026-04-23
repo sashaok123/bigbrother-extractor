@@ -46,5 +46,6 @@ Dll/
 *.sdf
 *.map
 
-# But DO keep these tracked — they're part of the repo
+# But DO keep these tracked - they're part of the repo
 !requirements.txt
+bigbrother-extractor-v*.zip
